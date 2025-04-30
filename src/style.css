@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.heading {
+    @apply text-2xl font-medium mb-4;
+}
+
+.menu{
+    @apply hover:text-gray-400;
+}

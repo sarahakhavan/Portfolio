@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link href="./src/output.css" rel="stylesheet" />
 </head>
 <body class="flex flex-col md:flex-row min-h-screen">
 
@@ -20,18 +21,18 @@
       <!-- Profile (Only show on md and larger) -->
       <div class="hidden md:flex flex-col items-center">
         <img src="assets/images/Sarah.png" alt="Profile Picture" class="w-32 h-32 rounded-full object-cover border-4 border-white">
-        <p class="mt-4 text-lg font-bold">Sarah Akhavan</p>
+        <p class="mt-4 text-xl font-semibold">Sarah Akhavan</p>
       </div>
 
-      <!-- Spacer element -->
-      <div class="hidden md:block h-2"></div>
+      <!-- Spacer element
+      <div class="hidden md:block h-2"></div> -->
 
       <!-- Navigation links -->
-      <nav class="flex flex-row md:flex-col justify-center md:justify-start md:ml-36  space-x-4 md:space-x-0 md:space-y-4 mt-2 md:mt-80 w-full">
-        <a href="#about" class="hover:text-gray-400">About</a>
-        <a href="#projects" class="hover:text-gray-400">Threads of Work</a>
-        <a href="#resume" class="hover:text-gray-400">Resume</a>
-        <a href="#contact" class="hover:text-gray-400">Contact</a>
+      <nav class="flex flex-row md:flex-col justify-center md:justify-start md:ml-36  space-x-4 md:space-x-0 md:space-y-4 mt-2 md:mt-8 w-full">
+        <a href="#about" class="menu">About</a>
+        <a href="#projects" class="menu">Threads of Work</a>
+        <a href="#resume" class="menu">Resume</a>
+        <a href="#contact" class="menu">Contact</a>
       </nav>
     </div>
   
@@ -48,22 +49,22 @@
   <!-- Main Content -->
   <main class="flex-1 bg-[#FDFAFA] mt-16 md:mt-0 md:ml-80 p-8 space-y-16" style="background-color: #FDFAFA;">
     <section id="about" class="min-h-screen md:mt-20 md:ml-20 ">
-      <h1 class="text-4xl font-bold mb-4">About Me</h1>
+      <h1 class="heading">About Me</h1>
       <p>Write about yourself here.</p>
     </section>
 
     <section id="projects" class="min-h-screen">
-      <h1 class="text-4xl font-bold mb-4">Threads of Work</h1>
+      <h1 class="heading">Threads of Work</h1>
       <p>Showcase your projects here.</p>
     </section>
 
     <section id="resume" class="min-h-screen">
-        <h1 class="text-4xl font-bold mb-4">Resume</h1>
+        <h1 class="heading">Resume</h1>
         <p>Showcase your projects here.</p>
       </section>
 
     <section id="contact" class="min-h-screen">
-      <h1 class="text-4xl font-bold mb-4">Contact</h1>
+      <h1 class="heading">Contact</h1>
       <p>Provide your contact details here.</p>
     </section>
     
@@ -80,6 +81,7 @@
 
 
 <!-- To do: 
+ Figure out what needs to go in tailwind.config.js
  change the font to "Inter"
  Check and fix decorations
 Menu is not horizontal in small screens anymore
