@@ -1,9 +1,21 @@
 @import "tailwindcss";
 
-.heading {
-    @apply text-2xl font-medium mb-4;
+body{
+    @apply font-sans;
 }
 
 .menu{
-    @apply hover:text-gray-400;
+    @apply font-medium hover:text-gray-400;
+}
+
+.heading-1 {
+    @apply text-2xl font-medium mb-4;
+}
+
+.heading-2 {
+    @apply text-xl font-medium mb-4;
+}
+
+.main-content{
+    @apply max-w-prose; 
 }

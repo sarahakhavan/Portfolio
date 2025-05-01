@@ -11,6 +11,9 @@ module.exports = {
           background: '#FDFAFA',
           primaryText: '#1E1E1E',
         },
+        maxWidth: {
+            prose: '76ch', // Change this value to fit your preference
+        },
       },
     },
     plugins: [],
