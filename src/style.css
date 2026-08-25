@@ -9,11 +9,27 @@ body{
 }
 
 .heading-1 {
-    @apply text-2xl font-medium mb-4;
+    @apply text-3xl font-medium mb-4 mt-6;
 }
 
 .heading-2 {
-    @apply text-xl font-medium mb-4;
+    @apply text-xl font-medium mb-2 mt-4;
+}
+
+.heading-3{
+    @apply text-2xl font-normal mb-2 mt-4;
+}
+
+.heading-4{
+    @apply text-xl font-normal mb-2 mt-4;
+}
+
+.heading-5{
+    @apply text-lg font-medium mb-2 mt-4;
+}
+
+.heading-6{
+    @apply text-base font-normal mb-2;
 }
 
 .main-content{

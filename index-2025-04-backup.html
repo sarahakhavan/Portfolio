@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Font: Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link href="./src/output.css" rel="stylesheet" />
+</head>
+
+<body class="flex flex-col md:flex-row min-h-screen">
+
+    <!-- Sidebar / Top Navbar -->
+    <aside
+        class="w-full md:w-80 bg-white text-[#1E1E1E] fixed top-0 z-20 flex flex-col md:h-screen md:flex-col md:justify-between md:items-center p-4"
+        style="background-color: #FFFFFF;">
+
+        <!-- Top section: profile + links -->
+        <div class="flex flex-col md:flex-col md:items-center md:space-y-8 w-full">
+
+            <!-- Spacer element -->
+            <div class="hidden md:block h-4"></div>
+
+            <!-- Profile (Only show on md and larger) -->
+            <div class="hidden md:flex flex-col items-center">
+                <img src="assets/images/Sarah.png" alt="Profile Picture"
+                    class="w-32 h-32 rounded-full object-cover border-4 border-white">
+                <p class="mt-4 text-xl font-semibold">Sarah Akhavan</p>
+            </div>
+
+            <!-- Spacer element
+      <div class="hidden md:block h-2"></div> -->
+
+            <!-- Navigation links -->
+            <nav
+                class="flex flex-row md:flex-col justify-center md:justify-start md:ml-36  space-x-4 md:space-x-0 md:space-y-4 mt-2 md:mt-8 w-full">
+                <a href="#about" class="menu">About</a>
+                <a href="#projects" class="menu">Threads of Work</a>
+                <a href="#resume" class="menu">Resume</a>
+                <!-- <a href="#contact" class="menu">Contact</a> -->
+            </nav>
+        </div>
+
+        <!-- Bottom copyright (only on md and bigger) -->
+        <div class="hidden md:block mb-4">
+            <p class="text-center text-xs text-gray-500">
+                Sarah Akhavan • Copyright © 2025
+            </p>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="flex-1 bg-[#FDFAFA] mt-16 md:mt-0 md:ml-80 p-8 space-y-2" style="background-color: #FDFAFA;">
+        <section id="about" class="md:mt-20 md:ml-20 ">
+            <h1 class="heading-1">About Me</h1>
+            <div class="main-content space-y-6">
+                <p>My work spans diverse domains, from hands-on design and collaborative research to mentoring and
+                    teaching.
+                </p>
+                <p>This portfolio is organized thematically to reflect the way I approach design: as a flexible and
+                    iterative process shaped by context, constraints, and understanding. </p>
+
+                <p> Rather than showing isolated case studies, I’ve chosen to highlight recurring patterns in my work
+                    across a range of projects.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="md:mt-20 md:ml-20 ">
+            <h1 class="heading-1">Threads of Work</h1>
+            <div class="main-content space-y-6">
+                <p>
+                    Explore the core themes that shape my approach to design. Each
+                    thread highlights key methods and decision points that span across projects. </p>
+
+                <p>These patterns reflect how I think, collaborate, and build meaningful experiences.
+                </p>
+                <h2 class="heading-2">Discovery</h2>
+                <div class="discovery-content space-y-6">
+                    <p>
+                        Every project starts with an understanding of context — people, environments, limitations, and
+                        goals.
+                    </p>
+                    <p>
+                        I begin by exploring what already exists, what’s missing, and what matters most to the people
+                        affected. This includes:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>
+                            Reviewing existing systems, services, and workflows
+                        </li>
+                        <li>
+                            Identifying stakeholder goals and constraints
+                        </li>
+                        <li>
+                            Understanding technical, organizational, and cultural constraints
+                        </li>
+                        <li>
+                            Noting emotional or cognitive friction experienced by users
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="md:mt-20 md:ml-20">
+            <h1 class="heading-1">Resume</h1>
+            <p> You can view and download my resume in PDF from <a
+                    href="./assets/resumes/SarahAkhavan-Resume-Research.pdf"> here </a> </p>
+            <!-- <h2 class="heading-2">Exprience</h2> -->
+            <h3 class="heading-3">Senior UX Researcher | Practices in Enabling Technologies (PiET) Lab, York University
+            </h3>
+            <h6 class="heading-6">JUL 2020 - PRESENT, Toronto </h6>
+            <ul class="list-disc list-inside space-y-4">
+                <li>Led teams of junior researchers to conduct research, prototype, design, and develop accessible
+                    technologies. </li>
+                <li>Conducted qualitative and quantitative research, identifying key insights to improve user experience
+                    for diverse user groups, including those with disabilities. </li>
+                <li>Developed and implemented usability testing frameworks, conducted data analysis, and led design
+                    evaluations across multiple projects.</li>
+            </ul>
+            <h4 class="heading-4">Notable Projects:</h4>
+            <h5 class="heading-5">AcTinSite Project (PRESENT)</h5>
+            <ul>
+                <li>Directing a group of junior researchers on designing an accessible interactive resource for
+                    accommodation in
+                    work-integrated learning. </li>
+                <li>Conducted in-depth qualitative research, identifying key patterns and insights from human
+                    participants,
+                    particularly those in need of accommodations. </li>
+            </ul>
+            <h5>Inclusive Open-Source Assistive Technologies </h5>
+            <ul>
+                <li>Developed an empirically derived group persona technique for increasing inclusion in the design of
+                    Open-Source Assistive Technologies, </li>
+                <li>Applied the concept to a case study of a writing system for people with deaf-blindness and motor
+                    impairments. </li>
+            </ul>
+            <h5>SmART Toolbox Study</h5>
+            <ul>
+                <li>Designed a usability evaluation framework for the SmART Toolbox.</li>
+                <li>Conducted thematic analysis over 151 entries.</li>
+                <li>Designed and directed Think Aloud sessions as part of the test stage.</li>
+            </ul>
+            <h3 class="heading-3">UX Researcher | Practices in Enabling Technologies (PiET) Lab, York University </h3>
+            <h6 class="heading-6">SEP 2018 - JUL 2020</h6>
+            <h5>Treasure Box Braille</h5>
+            <ul>
+                <li>Collaborated on research projects aimed at creating accessible learning and DIY tools for visually
+                    impaired
+                    children.</li>
+                <li>Contributed to the design of 3D assembly guidelines for DIY circuits and developed accessible
+                    tutorials for
+                    assembling the Treasure Box Braille. </li>
+            </ul>
+
+
+            <h3 class="heading-3">Director of UX Design and Research Courses | York University</h3>
+            <h6 class="heading-6">MAY 2020 - PRESENT, Toronto</h6>
+            <ul>
+                <li>Educated over 1100 students on UX Research Methods, Analysis of User Data, understanding of human
+                    cognition,
+                    emotion, and behavior, Modeling and Visualizing derived conclusions, and prototyping and usability
+                    evaluation. </li>
+                <li>Held over 13 workshops, covering topics like UX research methods, prototyping, accessibility in
+                    design,
+                    data
+                    analysis and behavioral analysis, information mapping and data visualization, communication with
+                    stakeholders.</li>
+                <li>Championed the implementation of accessible web interfaces, teaching students how to integrate web
+                    technologies in alignment with accessibility best practices. </li>
+                <li>Facilitated real-world project integration with my courses in partnership with YorkU Project
+                    Commons.</li>
+            </ul>
+
+            <h3 class="heading-3">Product Designer | Adanic Banking Informatics </h3>
+            <h6 class="heading-6">DEC 2016 - JUL 2018, Tehran </h6>
+            <p>Award Winning Project: Designed a multi-signature corporate banking account solution (KeyLead)
+                implemented
+                and white-labeld in 10+ leading banks in Iran. </p>
+            <ul>
+                <li>Conducted stakeholder interviews and user research within the finance industry.</li>
+                <li>Conducted iterative contextual inquiries and usability testings with users.</li>
+                <li>Created experience and affinity maps to determine the user journeys.</li>
+                <li>Provided annotated high-fidelity interactive prototypes to effectively communicate the design
+                    outcomes with
+                    the development team and clients.</li>
+                <li>Provided an enhanced unified design for iOS, android, and web applications leading to the products
+                    being
+                    adopted by more than 10 major banks in Iran.</li>
+            </ul>
+
+            <h3 class="heading-3">UX/UI Designer | Torob eCommerce Search Engine</h3>
+            <h6 class="heading-6">JUN 2016 - SEP 2016, Tehran</h6>
+            <ul>
+                <li>Conducted User Behaviour Analysis in different stages of the user journey.</li>
+                <li>Conducted heuristic evaluations based on Baymard Institute’s guidelines to identify potential pain
+                    points of
+                    the users. </li>
+                <li>Leveraged UX research to the design of flows and interfaces of Torob’s website, mobile applications,
+                    and
+                    their B2B eCommerce APIs.</li>
+                <li>Created low-fidelity prototypes, wireframes, and mockups of the final product.</li>
+                <li>Improved Torob’s Alexa rank to be among the top 1000 in Iran.</li>
+            </ul>
+
+        </section>
+
+        <!-- <section id="contact" class="md:mt-20 md:ml-20">
+            <h1 class="heading-1">Contact</h1>
+            <p>Provide your contact details here.</p>
+        </section> -->
+
+    </main>
+
+    <!-- Footer on small screens -->
+    <footer class="block md:hidden text-center text-xs text-gray-500 py-4 bg-[#FDFAFA]">
+        Sarah Akhavan • Copyright © 2025
+    </footer>
+
+</body>
+
+</html>
