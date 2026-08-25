@@ -66,10 +66,11 @@
             <div class="main-content space-y-6">
                 <p>I build the layer that generative models plug into.</p>
 
-                <p>I took a creative product from making still images to making video, speech, music, and
-                    super-resolution — ten generation pipelines, and the async orchestration, shared
-                    contracts, and document-model work each one needed before a model could ship at all.
-                    Thirty-plus third-party models from fourteen providers now land on that foundation.</p>
+                <p>I build the generative infrastructure behind a creative platform, and I built its
+                    expansion beyond images — into video, speech, music, and super-resolution. Ten
+                    generation pipelines, and the async orchestration, shared contracts, and
+                    document-model work each one needed. Thirty-plus third-party models from fourteen
+                    providers now land on that foundation.</p>
 
                 <p>The model count is the consequence. The platform underneath is the work.</p>
 
@@ -88,15 +89,14 @@
                 <p>Five projects worth describing, in general terms — employer systems, model vendors, and
                     commercial figures are deliberately left out.</p>
 
-                <h2 class="heading-2">A product that only made pictures</h2>
+                <h2 class="heading-2">From image generation to a multi-modal platform</h2>
                 <div class="discovery-content space-y-6">
-                    <p>The platform generated still images and nothing else. Video, speech, music, and
-                        super-resolution each needed infrastructure before they needed a vendor API call.</p>
+                    <p>The platform’s image generation was already strong. Extending it into video,
+                        speech, music, and super-resolution meant building new infrastructure under each
+                        one — not simply adding another vendor API call.</p>
                     <ul class="list-disc list-inside space-y-2">
-                        <li>Ten generation pipelines for modalities the platform could not previously
-                            produce</li>
-                        <li>New async job types, and output handling for media the system had never
-                            emitted</li>
+                        <li>Ten new generation pipelines, one for each modality added</li>
+                        <li>New async job types, and output handling for each new media type</li>
                         <li>Video support added to the shared canvas document model</li>
                         <li>36 source modules and 50 test suites written from scratch</li>
                     </ul>
@@ -104,8 +104,9 @@
 
                 <h2 class="heading-2">The abstraction underneath</h2>
                 <div class="discovery-content space-y-6">
-                    <p>Thirty integrations done thirty times is not a strategy. The work was deciding where
-                        vendor-specific behaviour is allowed to live.</p>
+                    <p>Thirty integrations done thirty separate times is not a strategy. The work was
+                        deciding where vendor-specific behaviour is allowed to live, so each new provider
+                        costs less than the last.</p>
                     <ul class="list-disc list-inside space-y-2">
                         <li>14 shared abstractions — provider interfaces, cross-service request contracts,
                             typed enums replacing stringly-typed parameters</li>
@@ -151,7 +152,7 @@
                         <li>Argued the extension point belonged in the type system rather than the URL
                             space</li>
                         <li>Specified a first-class task dimension with a capability matrix</li>
-                        <li>Replaced a catch-and-resubmit workaround</li>
+                        <li>Succeeds an interim catch-and-resubmit approach</li>
                     </ul>
                 </div>
 
@@ -169,8 +170,8 @@
                             and answered with a remedy, it becomes a next step</li>
                         <li>Free-text prompting replaced with a 35-entry curated style library, typed end to
                             end from tool schema to vendor call</li>
-                        <li>An unreliable tool that stays visible to the model is the expensive failure
-                            mode; a reliability gate before it becomes agent-visible is the cheap fix</li>
+                        <li>A tool that isn’t reliable yet shouldn’t be selectable by the model — a
+                            reliability gate before it becomes agent-visible is a cheap safeguard</li>
                     </ul>
                 </div>
             </div>
@@ -184,7 +185,7 @@
             <h3 class="heading-3">Software Engineer, ML Generalist | Lumina Platforms Inc.</h3>
             <h6 class="heading-6">OCT 2025 - PRESENT, Toronto </h6>
             <ul class="list-disc list-inside space-y-4">
-                <li>Expanded a creative generation platform from image-only to video, speech, music, and
+                <li>Expanded a creative generation platform beyond images into video, speech, music, and
                     super-resolution, designing the async orchestration, media handling, and shared
                     document-model infrastructure required to support new modalities.</li>
                 <li>Designed shared provider abstractions and cross-service contracts for a multi-provider
