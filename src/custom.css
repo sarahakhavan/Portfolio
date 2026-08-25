@@ -1,0 +1,122 @@
+/* ---------------------------------------------------------------
+   Typography and rhythm layer.
+   Plain CSS, loaded after output.css so it needs no Tailwind build.
+   Fold into src/style.css whenever convenient.
+   --------------------------------------------------------------- */
+
+:root {
+    --ink:        #1E1E1E;   /* headings */
+    --body:       #3B3835;   /* running text — softer than headings */
+    --meta:       #8C8580;   /* dates, labels */
+    --hairline:   #E8E3DE;
+    --marker:     #C9C2BB;
+    --measure:    62ch;
+}
+
+/* ── running text ───────────────────────────────────────────── */
+main p {
+    color: var(--body);
+    line-height: 1.75;
+    max-width: var(--measure);
+}
+
+/* ── section titles ─────────────────────────────────────────── */
+.heading-1 {
+    font-size: 2.25rem;
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.021em;
+    color: var(--ink);
+    margin: 0 0 1.25rem;
+}
+
+/* ── section lead: the paragraph under a section title ──────── */
+.lead {
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color: #5C5751;
+    max-width: 58ch;
+    margin: 0 0 1rem;
+}
+
+/* ── project / block titles ─────────────────────────────────── */
+.heading-2 {
+    font-size: 1.375rem;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.014em;
+    color: var(--ink);
+    margin: 0 0 0.75rem;
+}
+
+/* ── role titles in the resume section ──────────────────────── */
+.heading-3 {
+    font-size: 1.0625rem;
+    line-height: 1.45;
+    font-weight: 600;
+    letter-spacing: -0.006em;
+    color: var(--ink);
+    margin: 0 0 0.25rem;
+    max-width: var(--measure);
+}
+
+/* ── dates and small labels ─────────────────────────────────── */
+.heading-6 {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--meta);
+    margin: 0 0 1rem;
+}
+
+/* ── blocks: give each project and each role its own air ────── */
+.block {
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--hairline);
+}
+.block:first-of-type { border-top: 0; padding-top: 1rem; }
+.block:last-of-type  { padding-bottom: 0.5rem; }
+
+.role-block {
+    padding: 2rem 0;
+    border-top: 1px solid var(--hairline);
+}
+.role-block:first-of-type { border-top: 0; }
+
+/* ── lists: hanging bullets, generous spacing ───────────────── */
+.bullets {
+    list-style: disc;
+    padding-left: 1.15rem;
+    max-width: var(--measure);
+    color: var(--body);
+    line-height: 1.7;
+}
+.bullets > li { margin-bottom: 0.7rem; padding-left: 0.2rem; }
+.bullets > li:last-child { margin-bottom: 0; }
+.bullets > li::marker { color: var(--marker); }
+
+/* ── section spacing ────────────────────────────────────────── */
+main > section { padding-top: 5.5rem; }
+main > section:first-child { padding-top: 0; }
+
+@media (min-width: 768px) {
+    main > section { padding-top: 7rem; }
+    .heading-1 { font-size: 2.5rem; }
+}
+
+/* ── links ──────────────────────────────────────────────────── */
+main a { color: #1E1E1E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--marker); }
+main a:hover { text-decoration-color: var(--ink); }
+
+/* ── paragraph rhythm inside blocks ─────────────────────────── */
+.block p,
+.role-block p { margin: 0 0 1.15rem; }
+.block p:last-of-type,
+.role-block p:last-of-type { margin-bottom: 1.25rem; }
+.bullets { margin-top: 0; }
+
+/* section lead sits clear of the first block */
+.lead + .block,
+.lead ~ .block:first-of-type { margin-top: 0.5rem; }

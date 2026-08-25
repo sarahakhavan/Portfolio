@@ -14,6 +14,7 @@
         rel="stylesheet">
     <!-- Stylesheet -->
     <link href="./src/output.css" rel="stylesheet" />
+    <link href="./src/custom.css" rel="stylesheet" />
 </head>
 
 <body class="flex flex-col md:flex-row min-h-screen">
@@ -64,7 +65,7 @@
         <section id="about" class="md:mt-20 md:ml-20 ">
             <h1 class="heading-1">About Me</h1>
             <div class="main-content space-y-6">
-                <p>I build the layer that generative models plug into.</p>
+                <p class="lead">I build the layer that generative models plug into.</p>
 
                 <p>I build the generative infrastructure behind a creative platform, and I built its
                     expansion beyond images — into video, speech, music, and super-resolution. Ten
@@ -86,28 +87,35 @@
         <section id="projects" class="md:mt-20 md:ml-20 ">
             <h1 class="heading-1">Selected Work</h1>
             <div class="main-content space-y-6">
-                <p>Five projects worth describing, in general terms — employer systems, model vendors, and
-                    commercial figures are deliberately left out.</p>
+                <p class="lead">Five projects worth describing, in general terms — employer systems, model
+                    vendors, and commercial figures are deliberately left out.</p>
 
-                <h2 class="heading-2">From image generation to a multi-modal platform</h2>
-                <div class="discovery-content space-y-6">
+                <div class="block">
+
+
+                    <h2 class="heading-2">From image generation to a multi-modal platform</h2>
+                <div class="discovery-content">
                     <p>The platform’s image generation was already strong. Extending it into video,
                         speech, music, and super-resolution meant building new infrastructure under each
                         one — not simply adding another vendor API call.</p>
-                    <ul class="list-disc list-inside space-y-2">
+                    <ul class="bullets">
                         <li>Ten new generation pipelines, one for each modality added</li>
                         <li>New async job types, and output handling for each new media type</li>
                         <li>Video support added to the shared canvas document model</li>
                         <li>36 source modules and 50 test suites written from scratch</li>
                     </ul>
+                    </div>
                 </div>
 
-                <h2 class="heading-2">The abstraction underneath</h2>
-                <div class="discovery-content space-y-6">
+                <div class="block">
+
+
+                    <h2 class="heading-2">The abstraction underneath</h2>
+                <div class="discovery-content">
                     <p>Thirty integrations done thirty separate times is not a strategy. The work was
                         deciding where vendor-specific behaviour is allowed to live, so each new provider
                         costs less than the last.</p>
-                    <ul class="list-disc list-inside space-y-2">
+                    <ul class="bullets">
                         <li>14 shared abstractions — provider interfaces, cross-service request contracts,
                             typed enums replacing stringly-typed parameters</li>
                         <li>Capability differences held as declarative data rather than branching logic
@@ -116,52 +124,68 @@
                         <li>A straightforward image model takes about an hour to integrate, down from half
                             a day</li>
                     </ul>
+                    </div>
                 </div>
 
-                <h2 class="heading-2">An asset-registration subsystem, built alone</h2>
-                <div class="discovery-content space-y-6">
+                <div class="block">
+
+
+                    <h2 class="heading-2">An asset-registration subsystem, built alone</h2>
+                <div class="discovery-content">
                     <p>Designed, built, and tested solo, and shipped as a sequenced multi-stage rollout —
                         1,100+ lines at sole authorship.</p>
-                    <ul class="list-disc list-inside space-y-2">
+                    <ul class="bullets">
                         <li>Vendor client package with retry and status-reconciliation sweep</li>
                         <li>Asset-role data model and atomic namespaced metadata writes on PostgreSQL</li>
                         <li>Agent-facing registration tooling</li>
                         <li>Replaced per-request inlined pixels with reference-by-ID</li>
                     </ul>
+                    </div>
                 </div>
 
-                <h2 class="heading-2">Judging what a model made</h2>
-                <div class="discovery-content space-y-6">
+                <div class="block">
+
+
+                    <h2 class="heading-2">Judging what a model made</h2>
+                <div class="discovery-content">
                     <p>Evaluation for systems where the thing being assessed is a model rather than a
                         person — which is where research training turns out to be an engineering
                         advantage.</p>
-                    <ul class="list-disc list-inside space-y-2">
+                    <ul class="bullets">
                         <li>A rubric-based vision-language-model judge for automated layout-quality
                             scoring</li>
                         <li>Three independent scoring components against curated reference sets</li>
                         <li>Scenario-based evaluation flows for LLM tool selection</li>
                         <li>Tool schemas and agent instructions supporting selection across 30+ models</li>
                     </ul>
+                    </div>
                 </div>
 
-                <h2 class="heading-2">Arguing for the type system</h2>
-                <div class="discovery-content space-y-6">
+                <div class="block">
+
+
+                    <h2 class="heading-2">Arguing for the type system</h2>
+                <div class="discovery-content">
                     <p>A 246-line architecture proposal for video-editing support, currently in
                         delivery.</p>
-                    <ul class="list-disc list-inside space-y-2">
+                    <ul class="bullets">
                         <li>Argued the extension point belonged in the type system rather than the URL
                             space</li>
                         <li>Specified a first-class task dimension with a capability matrix</li>
                         <li>Succeeds an interim catch-and-resubmit approach</li>
                     </ul>
+                    </div>
                 </div>
 
-                <h2 class="heading-2">Designing for agents</h2>
-                <div class="discovery-content space-y-6">
+                <div class="block">
+
+
+                    <h2 class="heading-2">Designing for agents</h2>
+                <div class="discovery-content">
                     <p>A surprising amount of an agent’s behaviour is decided in prose, and almost none of
                         it by the model alone. Somebody has to choose what the agent is told, what the user
                         is told, and what happens when a model says no.</p>
-                    <ul class="list-disc list-inside space-y-2">
+                    <ul class="bullets">
                         <li>The instructions an LLM reads to choose a tool are an interface — written for a
                             reader, tested against behaviour, revised when the reader misunderstands</li>
                         <li>Thirty models with different accepted ratios, durations, and prompting
@@ -173,6 +197,7 @@
                         <li>A tool that isn’t reliable yet shouldn’t be selectable by the model — a
                             reliability gate before it becomes agent-visible is a cheap safeguard</li>
                     </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -182,9 +207,12 @@
             <p> You can view and download my resume in PDF from <a
                     href="./assets/resumes/SarahAkhavan-Resume.pdf"> here </a> </p>
 
-            <h3 class="heading-3">Software Engineer, ML Generalist | Lumina Platforms Inc.</h3>
+            <div class="role-block">
+
+
+                <h3 class="heading-3">Software Engineer, ML Generalist | Lumina Platforms Inc.</h3>
             <h6 class="heading-6">OCT 2025 - PRESENT, Toronto </h6>
-            <ul class="list-disc list-inside space-y-4">
+            <ul class="bullets">
                 <li>Expanded a creative generation platform beyond images into video, speech, music, and
                     super-resolution, designing the async orchestration, media handling, and shared
                     document-model infrastructure required to support new modalities.</li>
@@ -201,18 +229,26 @@
                     scenario-based evaluation flows for LLM tool selection; engineered tool schemas and
                     agent instructions supporting selection across 30+ models.</li>
             </ul>
+            </div>
 
-            <h3 class="heading-3">ML Research Intern | Lumina Platforms Inc.</h3>
+            <div class="role-block">
+
+
+                <h3 class="heading-3">ML Research Intern | Lumina Platforms Inc.</h3>
             <h6 class="heading-6">MAY 2025 - SEP 2025, Toronto </h6>
-            <ul class="list-disc list-inside space-y-4">
+            <ul class="bullets">
                 <li>Conducted diffusion-model research, built production ComfyUI generation workflows, and
                     collected data, labeled, and trained LoRA adapters for brand-specific style and subject
                     control.</li>
             </ul>
+            </div>
 
-            <h3 class="heading-3">Lecturer | Computer Science and IT, York University</h3>
+            <div class="role-block">
+
+
+                <h3 class="heading-3">Lecturer | Computer Science and IT, York University</h3>
             <h6 class="heading-6">MAY 2020 - PRESENT, Toronto</h6>
-            <ul class="list-disc list-inside space-y-4">
+            <ul class="bullets">
                 <li>Designed curriculum and taught 1,000+ students across 20+ sections in Data Structures,
                     System Analysis &amp; Design, Web Technologies, User Interfaces, and Information Mapping
                     &amp; Networks.</li>
@@ -222,11 +258,15 @@
                 <li>Facilitated real-world project integration within my courses in partnership with YorkU
                     Project Commons.</li>
             </ul>
+            </div>
 
-            <h3 class="heading-3">Research Scientist | Practices in Enabling Technologies (PiET) Lab, York
+            <div class="role-block">
+
+
+                <h3 class="heading-3">Research Scientist | Practices in Enabling Technologies (PiET) Lab, York
                 University</h3>
             <h6 class="heading-6">SEP 2018 - APR 2025, Toronto</h6>
-            <ul class="list-disc list-inside space-y-4">
+            <ul class="bullets">
                 <li>Developed an empirically derived group-persona technique for inclusive
                     assistive-technology design, applied to a writing system for people with deaf-blindness
                     and motor impairments.</li>
@@ -235,37 +275,46 @@
                 <li>Contributed to accessible learning and DIY tools for visually impaired children,
                     including 3D assembly guidelines and accessible tutorials.</li>
             </ul>
+            </div>
 
-            <h3 class="heading-3">Product Designer and Front-end Developer | Adanic Banking Informatics</h3>
+            <div class="role-block">
+
+
+                <h3 class="heading-3">Product Designer and Front-end Developer | Adanic Banking Informatics</h3>
             <h6 class="heading-6">DEC 2016 - JUL 2018, Tehran </h6>
-            <ul class="list-disc list-inside space-y-4">
+            <ul class="bullets">
                 <li>Designed and contributed to implementation of iOS, Android, and web banking products,
                     establishing a unified cross-platform design approach adopted by two additional
                     banks.</li>
                 <li>Conducted stakeholder interviews, contextual inquiries, and usability testing, and
                     produced annotated high-fidelity prototypes for development teams and clients.</li>
             </ul>
+            </div>
 
-            <h3 class="heading-3">UX/UI Design Intern | Torob Online Markets Search Engine</h3>
+            <div class="role-block">
+
+
+                <h3 class="heading-3">UX/UI Design Intern | Torob Online Markets Search Engine</h3>
             <h6 class="heading-6">JUN 2016 - SEP 2016, Tehran</h6>
-            <ul class="list-disc list-inside space-y-4">
+            <ul class="bullets">
                 <li>Conducted UX research, card sorting, and interface design for web and mobile product
                     experiences.</li>
             </ul>
 
             <h4 class="heading-4">Education</h4>
-            <ul class="list-disc list-inside space-y-2">
+            <ul class="bullets">
                 <li>MSc Human-Computer Interaction | York University</li>
                 <li>BSc Software Engineering | Amirkabir University of Technology</li>
             </ul>
 
             <h4 class="heading-4">Honors &amp; Awards</h4>
-            <ul class="list-disc list-inside space-y-2">
+            <ul class="bullets">
                 <li>Graduate Entrance Scholarship / Lassonde School of Engineering • 2018</li>
                 <li>2nd Place / Local ACM Contest • 2014</li>
                 <li>1st All-girls Team / Regional ACM Contest • 2013 &amp; 2014</li>
                 <li>99.5 percentile / National University Entrance Exam • 2013 • Iran</li>
             </ul>
+            </div>
 
         </section>
 
