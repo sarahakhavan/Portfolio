@@ -95,8 +95,8 @@
         <section id="projects" class="md:mt-20 md:ml-20 ">
             <h1 class="heading-1">Selected Work</h1>
             <div class="main-content space-y-6">
-                <p class="lead">Five projects worth describing, in general terms — employer systems, model
-                    vendors, and commercial figures are deliberately left out.</p>
+                <p class="lead">A few things I have built recently, described at a level that keeps client
+                    and vendor specifics out of it.</p>
 
                 <div class="block">
 
@@ -105,7 +105,7 @@
                 <div class="discovery-content">
                     <p>The platform’s image generation was already strong. Extending it into video,
                         speech, music, and super-resolution meant building new infrastructure under each
-                        one — not simply adding another vendor API call.</p>
+                        one, not simply adding another vendor API call.</p>
                     <ul class="bullets">
                         <li>Ten new generation pipelines, one for each modality added</li>
                         <li>New async job types, and output handling for each new media type</li>
@@ -124,7 +124,7 @@
                         deciding where vendor-specific behaviour is allowed to live, so each new provider
                         costs less than the last.</p>
                     <ul class="bullets">
-                        <li>14 shared abstractions — provider interfaces, cross-service request contracts,
+                        <li>14 shared abstractions: provider interfaces, cross-service request contracts,
                             typed enums replacing stringly-typed parameters</li>
                         <li>Capability differences held as declarative data rather than branching logic
                             across six services</li>
@@ -140,7 +140,7 @@
 
                     <h2 class="heading-2">An asset-registration subsystem, built alone</h2>
                 <div class="discovery-content">
-                    <p>Designed, built, and tested solo, and shipped as a sequenced multi-stage rollout —
+                    <p>Designed, built, and tested solo, and shipped as a sequenced multi-stage rollout.
                         1,100+ lines at sole authorship.</p>
                     <ul class="bullets">
                         <li>Vendor client package with retry and status-reconciliation sweep</li>
@@ -157,7 +157,7 @@
                     <h2 class="heading-2">Judging what a model made</h2>
                 <div class="discovery-content">
                     <p>Evaluation for systems where the thing being assessed is a model rather than a
-                        person — which is where research training turns out to be an engineering
+                        person, which is where research training turns out to be an engineering
                         advantage.</p>
                     <ul class="bullets">
                         <li>A rubric-based vision-language-model judge for automated layout-quality
@@ -194,7 +194,7 @@
                         it by the model alone. Somebody has to choose what the agent is told, what the user
                         is told, and what happens when a model says no.</p>
                     <ul class="bullets">
-                        <li>The instructions an LLM reads to choose a tool are an interface — written for a
+                        <li>The instructions an LLM reads to choose a tool are an interface: written for a
                             reader, tested against behaviour, revised when the reader misunderstands</li>
                         <li>Thirty models with different accepted ratios, durations, and prompting
                             requirements is a usability problem long before it is an engineering one</li>
@@ -202,8 +202,8 @@
                             and answered with a remedy, it becomes a next step</li>
                         <li>Free-text prompting replaced with a 35-entry curated style library, typed end to
                             end from tool schema to vendor call</li>
-                        <li>A tool that isn’t reliable yet shouldn’t be selectable by the model — a
-                            reliability gate before it becomes agent-visible is a cheap safeguard</li>
+                        <li>A tool that isn’t reliable yet shouldn’t be selectable by the model. A reliability
+                            gate before it becomes agent-visible is a cheap safeguard</li>
                     </ul>
                     </div>
                 </div>
