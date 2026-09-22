@@ -122,7 +122,12 @@ main a:hover { text-decoration-color: var(--ink); }
 .lead ~ .block:first-of-type { margin-top: 0.5rem; }
 
 /* ── horizontally scrolling media strip ────────────────────── */
-.media { margin: 1.5rem 0 0; }
+.media { margin: 1.75rem 0 0; }
+
+/* break out of the reading measure so a slide can show at full height */
+@media (min-width: 900px) {
+    .media { width: calc(100vw - 320px - 9rem); max-width: 1180px; }
+}
 
 .media-scroll {
     display: flex;
@@ -140,7 +145,7 @@ main a:hover { text-decoration-color: var(--ink); }
 }
 .media-scroll img {
     display: block;
-    height: 300px;
+    height: 600px;
     width: auto;
     border: 1px solid var(--hairline);
     background: #fff;
@@ -169,5 +174,5 @@ main a:hover { text-decoration-color: var(--ink); }
 }
 
 @media (max-width: 767px) {
-    .media-scroll img { height: 210px; }
+    .media-scroll img { height: 420px; }
 }
