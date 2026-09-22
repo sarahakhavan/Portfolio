@@ -120,3 +120,54 @@ main a:hover { text-decoration-color: var(--ink); }
 /* section lead sits clear of the first block */
 .lead + .block,
 .lead ~ .block:first-of-type { margin-top: 0.5rem; }
+
+/* ── horizontally scrolling media strip ────────────────────── */
+.media { margin: 1.5rem 0 0; }
+
+.media-scroll {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    padding-bottom: 14px;
+    -webkit-overflow-scrolling: touch;
+}
+.media-scroll figure {
+    margin: 0;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+.media-scroll img {
+    display: block;
+    height: 300px;
+    width: auto;
+    border: 1px solid var(--hairline);
+    background: #fff;
+}
+.media-scroll figcaption {
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--meta);
+    margin-top: 0.5rem;
+}
+.media-scroll:focus-visible { outline: 2px solid var(--marker); outline-offset: 4px; }
+
+/* slim scrollbar so the strip reads as scrollable */
+.media-scroll::-webkit-scrollbar { height: 6px; }
+.media-scroll::-webkit-scrollbar-track { background: var(--hairline); border-radius: 3px; }
+.media-scroll::-webkit-scrollbar-thumb { background: var(--marker); border-radius: 3px; }
+.media-scroll { scrollbar-width: thin; scrollbar-color: var(--marker) var(--hairline); }
+
+.media-cap {
+    font-size: 0.8125rem;
+    line-height: 1.65;
+    color: var(--meta);
+    max-width: var(--measure);
+    margin: 0.4rem 0 0;
+}
+
+@media (max-width: 767px) {
+    .media-scroll img { height: 210px; }
+}

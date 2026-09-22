@@ -108,6 +108,37 @@
                         <li>Built production generation workflows in ComfyUI</li>
                         <li>Trained 10+ LoRAs for different photographic styles</li>
                     </ul>
+
+                    <div class="media">
+                        <div class="media-scroll" tabindex="0" role="group"
+                            aria-label="LoRA training results, scroll horizontally">
+                            <figure>
+                                <img src="assets/images/lora/Q1.jpg" loading="lazy"
+                                    alt="Beauty LoRA: source dataset, training captions, and generated results at two checkpoints">
+                                <figcaption>Beauty LoRA &middot; dataset and captions</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="assets/images/lora/Q2.jpg" loading="lazy"
+                                    alt="Beauty LoRA: generated results compared across two training checkpoints">
+                                <figcaption>Beauty LoRA &middot; results by checkpoint</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="assets/images/lora/LV1.jpg" loading="lazy"
+                                    alt="Studio LoRA: source dataset, captioning approach, and generated results">
+                                <figcaption>Studio LoRA &middot; dataset and captions</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="assets/images/lora/LV2.jpg" loading="lazy"
+                                    alt="Studio LoRA: generated results with and without the LoRA applied, same prompts and seed">
+                                <figcaption>Studio LoRA &middot; with and without</figcaption>
+                            </figure>
+                        </div>
+                        <p class="media-cap">Results from two of the trained LoRAs. The first pair covers a
+                            beauty-photography set: source images, the generated captions used for training,
+                            and outputs at two checkpoints. The second covers a studio-fashion set captioned
+                            to retain styling detail, with the same prompts and seed run with and without the
+                            LoRA applied. Both were trained with fluxgym and tested in ComfyUI.</p>
+                    </div>
                     </div>
                 </div>
 
