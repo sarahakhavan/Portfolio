@@ -176,3 +176,8 @@ main a:hover { text-decoration-color: var(--ink); }
 @media (max-width: 767px) {
     .media-scroll img { height: 420px; }
 }
+
+/* ── sidebar: align the profile image with the first heading in main ── */
+@media (min-width: 768px) {
+    aside > div:first-of-type { padding-top: 48px; }
+}
